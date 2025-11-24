@@ -1,16 +1,29 @@
-streamlit
-ollama           # if installed via pip package or local SDK; may need local server
-langchain-core
-langchain-ollama
-langchain-community
-langchain-text-splitters
-langchain
-langchain_community
-nomic-embed-text # sometimes not via pip; depends on ollama usage
-duckduckgo_search
-beautifulsoup4
-aiohttp
-googlesearch-python
-pydantic
-python-dateutil
-bs4
+# RAGify - Requirements for Project (recommended)
+
+# Core
+streamlit>=1.10.0
+sentence-transformers>=2.2.2
+torch>=2.0.0
+transformers>=4.41.0
+
+# Web scraping and async IO
+beautifulsoup4>=4.12.2
+aiohttp>=3.8.0
+aiofiles>=23.1.0
+duckduckgo_search>=2.7.0
+googlesearch-python>=1.3.0
+
+# Utilities and data handling
+requests>=2.28.0
+python-dotenv>=1.0.0
+numpy>=1.23.0
+pandas>=2.0.0
+scikit-learn>=1.2.0
+tqdm>=4.64.0
+langchain-community>=0.4.0
+# faiss-cpu==1.7.4   # for faster large-scale nearest-neighbour search
+
+# Notes:
+# - Installing 'torch' may require picking a CPU/GPU-specific wheel. See:
+#   https://pytorch.org/get-started/locally/
+# - Remove any package you didn't actually use in final code to keep the environment lean.
